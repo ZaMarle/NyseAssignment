@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NyseDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="NYSEDb">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="exchange" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="stockSymbol" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="stockPriceOpen" Type="Double" />
+    <Property Name="stockPriceHigh" Type="Double" />
+    <Property Name="stockPriceLow" Type="Double" />
+    <Property Name="stockPriceClose" Type="Double" />
+    <Property Name="stockVolume" Type="Double" />
+    <Property Name="stockPriceAdjClose" Type="Double" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="nyseDataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="NYSEDbs" EntityType="Self.NYSEDb" />
+  </EntityContainer>
+</Schema>

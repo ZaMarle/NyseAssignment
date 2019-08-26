@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="Nyse.Client.SidebarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Nyse.Client"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="200">
+
+
+    <Grid Background="White">
+
+        <Border Padding="4" Background="DodgerBlue">
+            <Grid Background="White">
+                <!-- Row Definitions -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30px" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <!-- Search bar Top -->
+                <Grid Grid.Row="0"
+                      Background="DodgerBlue">
+
+                    <!-- Search bar row definitions -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Search text box on the top bar-->
+                    <TextBox Grid.Column="0" 
+                     Tag="Search text..."
+                     Margin="0 0 0 5"
+                     FontSize="14"
+                     Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                     >
+                        <TextBox.InputBindings>
+                            <KeyBinding Command="{Binding SearchStocksCommand}" Key="Enter"/>
+                        </TextBox.InputBindings>
+                    </TextBox>
+
+                    <!-- The search button on the top bar -->
+                    <Button  Grid.Column="1"
+                     Command="{Binding SearchStocksCommand}"
+                     FontFamily="{StaticResource FontAwesome}"
+                     Content="&#xf002;"
+                     Background="Transparent"
+                     Foreground="Black"
+                     BorderThickness="0"
+                     Padding="6"
+                     Margin="3 0 0 5"
+                     >
+
+                    </Button>
+
+                </Grid>
+
+                <!-- List of stock symbols container -->
+                <Grid Grid.Row="1">
+                    
+                    <!-- Sidebar items-->
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <ItemsControl ItemsSource="{Binding FilteredStocks}">
+
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+
+                                    <local:SidebarListItemControl/>
+                                    
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+
+                        </ItemsControl>
+                    </ScrollViewer>
+
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
+ 

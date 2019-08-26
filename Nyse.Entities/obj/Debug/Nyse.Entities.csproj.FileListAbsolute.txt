@@ -1,0 +1,12 @@
+C:\Users\Zac\Desktop\NyseAssignment\NyseAssignment\Nyse.Entities\bin\Debug\Nyse.Entities.dll.config
+C:\Users\Zac\Desktop\NyseAssignment\NyseAssignment\Nyse.Entities\bin\Debug\Nyse.Entities.dll
+C:\Users\Zac\Desktop\NyseAssignment\NyseAssignment\Nyse.Entities\bin\Debug\Nyse.Entities.pdb
+C:\Users\Zac\Desktop\NyseAssignment\NyseAssignment\Nyse.Entities\bin\Debug\EntityFramework.dll
+C:\Users\Zac\Desktop\NyseAssignment\NyseAssignment\Nyse.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Zac\Desktop\NyseAssignment\NyseAssignment\Nyse.Entities\bin\Debug\EntityFramework.xml
+C:\Users\Zac\Desktop\NyseAssignment\NyseAssignment\Nyse.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Zac\Desktop\NyseAssignment\NyseAssignment\Nyse.Entities\obj\Debug\Nyse.Entities.csprojAssemblyReference.cache
+C:\Users\Zac\Desktop\NyseAssignment\NyseAssignment\Nyse.Entities\obj\Debug\Nyse.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Zac\Desktop\NyseAssignment\NyseAssignment\Nyse.Entities\obj\Debug\Nyse.Entities.csproj.CopyComplete
+C:\Users\Zac\Desktop\NyseAssignment\NyseAssignment\Nyse.Entities\obj\Debug\Nyse.Entities.dll
+C:\Users\Zac\Desktop\NyseAssignment\NyseAssignment\Nyse.Entities\obj\Debug\Nyse.Entities.pdb

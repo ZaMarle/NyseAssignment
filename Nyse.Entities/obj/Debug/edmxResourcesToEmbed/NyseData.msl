@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NyseDataModelStoreContainer" CdmEntityContainer="nyseDataEntities">
+    <EntitySetMapping Name="NYSEDbs">
+      <EntityTypeMapping TypeName="NyseDataModel.NYSEDb">
+        <MappingFragment StoreEntitySet="NYSEDb">
+          <ScalarProperty Name="exchange" ColumnName="exchange" />
+          <ScalarProperty Name="stockSymbol" ColumnName="stockSymbol" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="stockPriceOpen" ColumnName="stockPriceOpen" />
+          <ScalarProperty Name="stockPriceHigh" ColumnName="stockPriceHigh" />
+          <ScalarProperty Name="stockPriceLow" ColumnName="stockPriceLow" />
+          <ScalarProperty Name="stockPriceClose" ColumnName="stockPriceClose" />
+          <ScalarProperty Name="stockVolume" ColumnName="stockVolume" />
+          <ScalarProperty Name="stockPriceAdjClose" ColumnName="stockPriceAdjClose" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
