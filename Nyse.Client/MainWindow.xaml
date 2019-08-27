@@ -24,7 +24,7 @@
             <ColumnDefinition Width="200px"/>
 
             <!-- Main Content -->
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 <!--<local:SidebarControl />-->
         <!-- Side bar -->

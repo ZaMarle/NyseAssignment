@@ -37,13 +37,11 @@ namespace Nyse.Client
 
         public StockViewViewModel(string Symbol, IStockReader stockReader)
         {
+            // Constructor injected Data Reader
             dataReader = stockReader;
 
-            Stock = new ObservableCollection<Stock>();
-
+            // Calls async task to populate the stock property with data
             OnStart(Symbol);
-
-            Console.WriteLine("Stock view model getting " + Symbol);
         }
 
         #endregion

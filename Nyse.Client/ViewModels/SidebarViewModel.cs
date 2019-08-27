@@ -50,6 +50,8 @@ namespace Nyse.Client
             }
         }
 
+        public bool FetchDataOnConstruction { get; set; } = false;
+
         public IStockReader DataReader { get; set; }
 
 
@@ -68,9 +70,6 @@ namespace Nyse.Client
             // Instantiates the datareader
             DataReader = dataReader;
 
-            // Instantiates the stocks property 
-            Stocks = new ObservableCollection<Stock>();
-
             // Gets the data from the web server and populates the stocks and filtered stocks
             onStart();
 
@@ -85,40 +84,50 @@ namespace Nyse.Client
         // Event that fires when this class is constructed
         public async void onStart()
         {
+            // Show that the data has been fetched on construction
+            FetchDataOnConstruction = true;
+
             // Sets the Stocks with the data from the web server
             Stocks = await DataReader.GetStocks();
 
             if (Stocks == null) return;
 
-            // Instantiates empty collection of SidebarItems
-            SidebarItems = new ObservableCollection<SidebarListItemViewModel>();
-
-            //Populates the collection of sidebarItems with sidebar viewmodels
-            foreach (var stock in Stocks)
+            await Task.Run(() =>
             {
-                SidebarItems.Add(new SidebarListItemViewModel(stock));
-            };
+                // Instantiates empty collection of FilteredStocks
+                SidebarItems = new ObservableCollection<SidebarListItemViewModel>();
 
-            // Instantiates the filtered stocks and sets the value to the SidebarItems value
-            FilteredStocks = new ObservableCollection<SidebarListItemViewModel>(SidebarItems);
+                //Populates the collection of FilteredStocks with sidebar viewmodels
+                foreach (var stock in Stocks)
+                {
+                    SidebarItems.Add(new SidebarListItemViewModel(stock));
+                };
+
+                FilteredStocks = SidebarItems;
+            });
         }
 
-
         // Searches all the stocks symbols and filters by the SearchText property
-        public void FilterStockSymbols(string SearchText)
+        public async void FilterStockSymbols(string SearchText)
         {
-            if (FilteredStocks == null) return;
-
-            // Check to see if search box is null or empty
-            if (string.IsNullOrEmpty(SearchText))
+            // I put this here so the unit test would would be async, but im not really sure if u should wrap
+            // the whole function in a task or not?
+            await Task.Run(() =>
             {
-                FilteredStocks = new ObservableCollection<SidebarListItemViewModel>(SidebarItems);
-                return;
-            }
+                // Checks for null
+                if (SidebarItems == null) return;
 
-            // Find all stocks symbols that contain the search text
-            FilteredStocks = new ObservableCollection<SidebarListItemViewModel>(SidebarItems.Where(s => s.stockSymbol.ToLower().Contains(SearchText)));
+                // Check to see if search box is null or empty
+                if (string.IsNullOrEmpty(SearchText))
+                {
+                    FilteredStocks = new ObservableCollection<SidebarListItemViewModel>(SidebarItems);
+                    return;
+                }
 
+                // Find all stocks symbols that contain the search text
+                FilteredStocks = new ObservableCollection<SidebarListItemViewModel>(SidebarItems.Where(s => s.stockSymbol.ToLower().Contains(SearchText)));
+
+            });
         }
 
         #endregion

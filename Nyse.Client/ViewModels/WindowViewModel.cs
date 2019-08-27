@@ -48,14 +48,13 @@ namespace Nyse.Client
 
         #region Methods
 
+        // Sets the CurrentViewModel property to a new StockViewViewModel instance 
         public async void UpdateStock(string stockSymbol)
         {
             await Task.Run(() =>
             {
                 CurrentViewModel = new StockViewViewModel(stockSymbol, stockReader);
             });
-
-            Console.WriteLine(CurrentViewModel.Stock.Count());
         }
 
         #endregion

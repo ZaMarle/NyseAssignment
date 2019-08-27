@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nyse.Client", "Nyse.Client\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nyse.WebApi", "Nyse.WebApi\Nyse.WebApi.csproj", "{39AC806F-5369-4898-A11F-08CCBCD9E925}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nyse.Client.Tests", "Nyse.Client.Tests\Nyse.Client.Tests.csproj", "{ADC7068A-03A6-466A-BD7A-596DC9C3A1DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{39AC806F-5369-4898-A11F-08CCBCD9E925}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39AC806F-5369-4898-A11F-08CCBCD9E925}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39AC806F-5369-4898-A11F-08CCBCD9E925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADC7068A-03A6-466A-BD7A-596DC9C3A1DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADC7068A-03A6-466A-BD7A-596DC9C3A1DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADC7068A-03A6-466A-BD7A-596DC9C3A1DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADC7068A-03A6-466A-BD7A-596DC9C3A1DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
