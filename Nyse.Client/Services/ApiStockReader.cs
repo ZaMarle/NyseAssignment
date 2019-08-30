@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace Nyse.Client
 {
@@ -22,9 +23,7 @@ namespace Nyse.Client
                 {
                     try
                     {
-                        var stocks = await res.Content.ReadAsAsync<ObservableCollection<Stock>>();
-
-                        return stocks;
+                        return await res.Content.ReadAsAsync<ObservableCollection<Stock>>();
                     }
                     catch
                     {

@@ -16,6 +16,7 @@ namespace Nyse.WebApi.Controllers
             _db = new nyseDataEntities();
         }
 
+        // Gets the First Stock from each stock symbol and orders them by stock symbol
         public IHttpActionResult Get()
         {
             var res = _db.NYSEDbs.GroupBy(s => s.stockSymbol)
@@ -26,6 +27,7 @@ namespace Nyse.WebApi.Controllers
             return Json(res);
         }
 
+        // Returns all of the stocks data for the selected stock
         public IHttpActionResult Get(string id)
         {
             var res = _db.NYSEDbs.Where(s => s.stockSymbol == id)

@@ -23,7 +23,7 @@ namespace Nyse.Client
         private static void ConfigureContainer()
         {
             // Binds an instance of the Data service to IStockReader
-            Kernel.Bind<IStockReader>().ToConstant(new ApiStockReader());
+            Kernel.Bind<IStockReader>().ToConstant(new CachingReader(new ApiStockReader()));
         }
 
         private static void BindViewModels()

@@ -67,6 +67,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Caching\CachingReader.cs" />
     <Compile Include="IoC\Ioc.cs" />
     <Compile Include="Services\ApiStockReader.cs" />
     <Compile Include="Shared\BaseViewModel.cs" />
