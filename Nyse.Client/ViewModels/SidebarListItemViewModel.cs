@@ -40,6 +40,9 @@ namespace Nyse.Client
             // Gets the instance of WindowViewModel from the Ioc container
             var vm = Ioc.Kernel.Get<WindowViewModel>();
 
+            // Handles the view changed events
+            vm.ViewModelChanged();
+
             // Updates the Stock from the stock selected
             vm.UpdateStock(stockSymbol);
         }

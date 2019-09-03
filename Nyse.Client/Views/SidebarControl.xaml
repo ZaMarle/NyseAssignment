@@ -26,6 +26,7 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
 
                     <!-- Search text box on the top bar-->
@@ -45,6 +46,20 @@
                      Command="{Binding SearchStocksCommand}"
                      FontFamily="{StaticResource FontAwesome}"
                      Content="&#xf002;"
+                     Background="Transparent"
+                     Foreground="Black"
+                     BorderThickness="0"
+                     Padding="6"
+                     Margin="3 0 0 5"
+                     >
+
+                    </Button>
+
+                    <!-- Button for showing the settings page -->
+                    <Button  Grid.Column="2"
+                     Command="{Binding ShowSettingsCommand}"
+                     FontFamily="{StaticResource FontAwesome}"
+                     Content="&#xf013;"
                      Background="Transparent"
                      Foreground="Black"
                      BorderThickness="0"

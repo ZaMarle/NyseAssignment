@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Nyse.Client
 {
     /// <summary>
-    /// Interaction logic for StockViewControl.xaml
+    /// Interaction logic for SettingsView.xaml
     /// </summary>
-    public partial class StockViewControl : UserControl
+    public partial class SettingsView : UserControl
     {
-        public StockViewControl()
+        public SettingsView()
         {
             InitializeComponent();
         }

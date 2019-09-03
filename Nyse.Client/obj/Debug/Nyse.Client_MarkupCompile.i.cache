@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Zac\Source\Repos\ZaMarle\NyseAssignment\Nyse.Client\App.xaml
-4767014805
+5-1990602137
 
-21970784879
+23-564583572
 16147662305
-MainWindow.xaml;Views\SidebarControl.xaml;Views\SidebarListItemControl.xaml;Views\StockViewControl.xaml;
+MainWindow.xaml;Views\SettingsView.xaml;Views\SidebarControl.xaml;Views\SidebarListItemControl.xaml;Views\StockViewControl.xaml;
 
 True
 

@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="600">
     
     <Grid>
-        <Border Padding="4" Background="DodgerBlue">
+        <Border Padding="3" Background="DodgerBlue">
             <Grid Background="White">
                 <DataGrid ItemsSource="{Binding Stock}"/>
             </Grid>

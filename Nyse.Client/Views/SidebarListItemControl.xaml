@@ -8,7 +8,7 @@
              d:DesignHeight="20" d:DesignWidth="100"
              Height="20">
 
-    <!-- template/Event/Hover for the Liost item -->
+    <!-- template/Event/Hover for the List item -->
     <UserControl.Resources>
         <Style x:Key="ContentStyle" TargetType="{x:Type ContentControl}">
             

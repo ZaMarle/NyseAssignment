@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Ninject;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -61,6 +62,8 @@ namespace Nyse.Client
 
         public ICommand SearchStocksCommand { get; set; }
 
+        public ICommand ShowSettingsCommand { get; set; }
+
         #endregion
 
         #region Constructor
@@ -75,6 +78,9 @@ namespace Nyse.Client
 
             //creates the command to filter stocks
             SearchStocksCommand = new RelayCommand(() => FilterStockSymbols(SearchText));
+
+            // Creates command to show the settings window
+            ShowSettingsCommand = new RelayCommand(() => ShowSettings());
         }
 
         #endregion
@@ -127,6 +133,22 @@ namespace Nyse.Client
                 // Find all stocks symbols that contain the search text
                 FilteredStocks = new ObservableCollection<SidebarListItemViewModel>(SidebarItems.Where(s => s.stockSymbol.ToLower().Contains(SearchText)));
 
+            });
+        }
+
+        // Sets the current window to the settings window
+        public async void ShowSettings()
+        {
+            Console.WriteLine("show settings window");
+
+            var vm = Ioc.Kernel.Get<WindowViewModel>();
+
+            // Handles the view changed events
+            vm.ViewModelChanged();
+
+            await Task.Run(() =>
+            {
+                vm.CurrentViewModel = new SettingsViewModel();
             });
         }
 

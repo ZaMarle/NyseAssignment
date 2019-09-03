@@ -78,7 +78,7 @@ namespace Nyse.Client
                 var data = await _WrappedReader.GetStockData(s);
 
                 // delay so the http request fires smoothly
-                await Task.Delay(250);
+                await Task.Delay(1500);
 
                 // Adds the stockSymbols, and the Stock Data to the _CachedItems dictionary
                 _CachedItems.Add(s, data);

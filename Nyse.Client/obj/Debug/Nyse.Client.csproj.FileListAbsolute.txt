@@ -58,3 +58,5 @@ C:\Users\Zac\Source\Repos\ZaMarle\NyseAssignment\Nyse.Client\obj\Debug\Nyse.Clie
 C:\Users\Zac\Source\Repos\ZaMarle\NyseAssignment\Nyse.Client\obj\Debug\Nyse.Client.csproj.CopyComplete
 C:\Users\Zac\Source\Repos\ZaMarle\NyseAssignment\Nyse.Client\obj\Debug\Nyse.Client.exe
 C:\Users\Zac\Source\Repos\ZaMarle\NyseAssignment\Nyse.Client\obj\Debug\Nyse.Client.pdb
+C:\Users\Zac\Source\Repos\ZaMarle\NyseAssignment\Nyse.Client\obj\Debug\Views\SettingsView.g.cs
+C:\Users\Zac\Source\Repos\ZaMarle\NyseAssignment\Nyse.Client\obj\Debug\Views\SettingsView.baml

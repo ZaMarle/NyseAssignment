@@ -10,6 +10,8 @@ namespace Nyse.Client
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        public bool Active { get; set; } = true;
+
         /// <summary>
         /// The event that is fired when any child property changes its value
         /// </summary>

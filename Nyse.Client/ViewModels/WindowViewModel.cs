@@ -14,7 +14,7 @@ namespace Nyse.Client
     {
         #region Private Members
 
-        private StockViewViewModel _CurrentViewModel;
+        private BaseViewModel _CurrentViewModel;
 
         readonly IStockReader stockReader = Ioc.Kernel.Get<IStockReader>();
 
@@ -22,7 +22,7 @@ namespace Nyse.Client
 
         #region Public Properties
 
-        public StockViewViewModel CurrentViewModel
+        public BaseViewModel CurrentViewModel
         {
             get => _CurrentViewModel;
             set
@@ -47,6 +47,17 @@ namespace Nyse.Client
         #endregion
 
         #region Methods
+
+        // Update the main view model event
+        public void ViewModelChanged()
+        {
+            // If the current view model is the settings view model set activate to false
+            if (CurrentViewModel.ToString() == "Nyse.Client.SettingsViewModel")
+            {
+                // Sets the Active property on the SettingsViewModel to false
+                CurrentViewModel.Active = false;
+            }
+        }
 
         // Sets the CurrentViewModel property to a new StockViewViewModel instance 
         public async void UpdateStock(string stockSymbol)
