@@ -23,6 +23,9 @@ namespace Nyse.Client
             // Setup IoC 
             Ioc.Setup();
 
+            Ioc.Logger.Log("Application starting up");
+            Ioc.Logger.Log("Application starting up", LogLevel.Error);
+
             // Show the main window
             Current.MainWindow = new MainWindow();
 

@@ -9,6 +9,8 @@ namespace Nyse.Client
 {
     public class FakeReader : IStockReader
     {
+         #region Test Data
+
         // Sets up the Test Data for use in this class
         ObservableCollection<Stock> testData = new ObservableCollection<Stock>()
         {
@@ -36,6 +38,7 @@ namespace Nyse.Client
             }
         };
 
+        #endregion
 
         // Fake service call to retrieve data for a single stock
         public async Task<ObservableCollection<Stock>> GetStockData(string symbol)

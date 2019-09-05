@@ -68,7 +68,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Caching\CachingReader.cs" />
+    <Compile Include="IoC\Logging\Implementation\BaseLogFactory.cs" />
+    <Compile Include="IoC\Logging\Implementation\ConsoleLogger.cs" />
+    <Compile Include="IoC\Logging\ILogFactory.cs" />
     <Compile Include="IoC\Ioc.cs" />
+    <Compile Include="IoC\Logging\ILogger.cs" />
+    <Compile Include="IoC\Logging\LogLevel.cs" />
+    <Compile Include="IoC\Logging\LogFactoryLevel.cs" />
     <Compile Include="Services\ApiStockReader.cs" />
     <Compile Include="Shared\BaseViewModel.cs" />
     <Compile Include="Services\FakeReader.cs" />
