@@ -5,6 +5,7 @@ The Nyse Programming project is a windows client application built for viewing p
 
 
 Features
+----------------------------------------
 
 *Sql Server database
 
@@ -35,11 +36,13 @@ Requirements:
 
 
 Clone
+----------------------------------------
 
 *Clone this repo to your local machine using https://github.com/ZaMarle/NyseAssignment.git
 
 
 Configuration
+----------------------------------------
 
 *Download the Nyse-db-script.zip
 
