@@ -3,6 +3,7 @@ Nyse Programming Project
 
 The Nyse Programming project is a windows client application built for viewing prices on the New York Stock Exchange.
 
+
 Features
 
 *Sql Server database
