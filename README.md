@@ -9,19 +9,20 @@ Features
 
 *Sql Server database
 
-  -Stores the stock data
+  - Stores the stock data.
   
 *Entity Framework Project
 
-  -Access to the data from the database
+  - Access to the data from the database.
   
 *asp.Net Web Api Project
 
-  -Exposes the data to a web server
+  - Exposes the data to a web server.
 
 *Wpf mvvm Project
 
-  -Consumes the data from the web serve into a Windows client application
+  - Consumes the data from the web serve into a Windows client application.
+  - Displays an interactive user interface for viewing stock market data.
 
 Installation
 ----------------------------------------
